@@ -6,7 +6,7 @@ export const Content = ({data}) => {
         <div className="top">
             <div className="container">
             <div className="left">
-                <div className="left-image"><img src={svgIcon} alt="dummy-image" height="100" width="100"/></div>
+                <div className="left-image"><img src={svgIcon} alt="dummy" height="100" width="100"/></div>
                 <div className="left-text">
                     <div>{data.Name} <i style={{color: "blue"}}class="fas fa-external-link-alt"></i></div>
                     <div style={{color: "blue" ,fontSize: "small"}}>{data.website}<i class="fas fa-globe"></i></div>
