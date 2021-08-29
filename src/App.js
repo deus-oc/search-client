@@ -18,7 +18,7 @@ const SearchBar = () => {
     console.log(q);
     if(q.length !== 0){
       try{
-        const res = await axios.get(`/search?q=${q}`)
+        const res = await axios.get(`https://sample-search-app.herokuapp.com/search?q=${q}`)
         setOptions(res.data.data);
         setApiHit(true);
       } catch (err) {
@@ -34,7 +34,7 @@ const SearchBar = () => {
   const clickedOptions = async (_id) => {
     setApiHit(false);
     try{  
-      const res = await axios.get(`/search/${_id}`)
+      const res = await axios.get(`https://sample-search-app.herokuapp.com/search/${_id}`)
       setDisplayData(res.data.data);
     } catch (err) {
       console.log(err);
