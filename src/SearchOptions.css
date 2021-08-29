@@ -1,0 +1,52 @@
+.search-box {
+    border: 0.5px solid black;
+    max-height: 250px;
+    overflow: auto;
+    list-style: none;
+    background-color: rgb(248, 245, 245);
+    font-family: cursive;
+}
+
+.search-box .entry {
+    padding: 5px 5px 5px 5px
+}
+
+.search-box .entry:hover {
+    background-color: rgb(182, 178, 178);
+    cursor: pointer;
+}
+
+.search-box .no-data {
+  padding: 5px 5px 5px 5px
+}
+
+.search-box .no-data:hover {
+  background-color: rgb(182, 178, 178);
+}
+
+.website-name {
+    font-size: small;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 2px;
+    margin-left: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .green {
+    background: rgb(140, 224, 140);
+  }
+  
+  .blue {
+    background: rgb(70, 70, 201);
+  }
+  .orange {
+    background: orange;
+  }
+  .pink {
+    background: pink;
+  }
