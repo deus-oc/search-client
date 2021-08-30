@@ -18,7 +18,6 @@ const SearchBar = () => {
   let cancelToken;
   const getSearchOptions = async (q) => { 
     q = q.trim();
-    console.log(q);
     if(q.length !== 0){
     //Check if there are any previous pending requests
       if (typeof cancelToken != typeof undefined) {
