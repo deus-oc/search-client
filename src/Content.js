@@ -8,17 +8,17 @@ export const Content = ({data}) => {
             <div className="left">
                 <div className="left-image"><img src={svgIcon} alt="dummy" height="100" width="100"/></div>
                 <div className="left-text">
-                    <div>{data.Name} <i style={{color: "blue"}}class="fas fa-external-link-alt"></i></div>
-                    <div style={{color: "blue" ,fontSize: "small"}}>{data.website}<i class="fas fa-globe"></i></div>
+                    <div>{data.Name} <i style={{color: "blue"}}className="fas fa-external-link-alt"></i></div>
+                    <div style={{color: "blue" ,fontSize: "small"}}>{data.website}<i className="fas fa-globe"></i></div>
                     <div style={{fontSize: "small"}}>{data.Location}</div>
-                    <div><i style={{backgroundColor: "lightblue", padding: "1px"}} class="fa fa-linkedin " aria-hidden="true"></i>
+                    <div><i style={{backgroundColor: "lightblue", padding: "1px"}} className="fa fa-linkedin " aria-hidden="true"></i>
             </div>
                 </div>
             </div>
             <div className="center">
                 <div className="num-employees">
                     <div>
-                        <span><i class="fas fa-user-friends"></i></span>
+                        <span><i className="fas fa-user-friends"></i></span>
                     </div>
                     <div className="num-emp-content">
                         <span>{Math.floor(Math.random() * 100)}</span>
@@ -27,7 +27,7 @@ export const Content = ({data}) => {
                 </div>
                 <div className="num-employees">
                     <div >
-                        <span><i class="fas fa-globe"></i></span>
+                        <span><i className="fas fa-globe"></i></span>
                     </div>
                     <div className="num-emp-content">
                         <span>Motor</span>

@@ -7,19 +7,31 @@ import { SearchOptions } from './SearchOptions';
 import { Content } from './Content';
 import axios from 'axios'
 
+// let cancelToken;
 const SearchBar = () => {
   // when we want to display options 
+  const [searchData, setSearchData] = useState("");
   const [options, setOptions] = useState([]);
   const [apiHit, setApiHit] = useState(false);
   const [displayData, setDisplayData] = useState();
 
+  let cancelToken;
   const getSearchOptions = async (q) => { 
     q = q.trim();
     console.log(q);
     if(q.length !== 0){
+    //Check if there are any previous pending requests
+      if (typeof cancelToken != typeof undefined) {
+        cancelToken.cancel()
+      }
+      //Save the cancel token for the current request
+      cancelToken = axios.CancelToken.source()
+      let config = {cancelToken: cancelToken.token}
+
       try{
-        const res = await axios.get(`https://sample-search-app.herokuapp.com/search?q=${q}`)
+        const res = await axios.get(`https://sample-search-app.herokuapp.com/search?q=${q}`,config);
         setOptions(res.data.data);
+        setSearchData(q);
         setApiHit(true);
       } catch (err) {
         console.log(err);
@@ -57,7 +69,7 @@ const SearchBar = () => {
         )
       }}/>
       </div>
-      {apiHit ? <SearchOptions options={options} clickedOptions={clickedOptions}/> : <Content data={displayData}/>}
+      {apiHit ? <SearchOptions options={options} clickedOptions={clickedOptions}  searchStr={searchData}/> : <Content data={displayData} />}
     </div>
   );
 }

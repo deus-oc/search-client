@@ -14,7 +14,6 @@
 .left {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .left-text {
@@ -25,7 +24,6 @@
 .center {
     display: flex;
     justify-content: space-between;
-
 }
 
 .num-employees {
